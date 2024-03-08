@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttons"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/refresh"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/list_view"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@id/add"
+            android:background="#FFFFFF"
+            android:contentDescription="TODO"
+            android:onClick="refresh"
+            android:scaleType="centerInside"
+            android:src="@drawable/refresh"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/add"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/list_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:contentDescription="TODO"
+            android:onClick="addAccount"
+            android:scaleType="centerInside"
+            android:src="@drawable/tianjia"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/list_view"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/add"
+            android:background="#FFFFFF"
+            android:contentDescription="TODO"
+            android:onClick="searchAccount"
+            android:scaleType="centerInside"
+            android:src="@drawable/search"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
